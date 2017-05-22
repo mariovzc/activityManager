@@ -47,7 +47,8 @@ class LoginVC: UIViewController, ValidationDelegate, UITextFieldDelegate {
     
     func validationSuccessful() {
         if (userTextField.text == "nativapps" && passwordTextField.text == "12345") {
-            
+            self.performSegue(withIdentifier: "mainViewSegue", sender: nil)
+
         }else{
             SCLAlertView().showError("Error", subTitle: "Invalid Username or password") // Error
 

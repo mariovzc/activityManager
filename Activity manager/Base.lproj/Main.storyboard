@@ -66,6 +66,7 @@
                         <outlet property="passwordTextField" destination="KNm-8D-nJH" id="ws6-0N-a4F"/>
                         <outlet property="submitButton" destination="TCs-dl-vC1" id="7cw-le-Bko"/>
                         <outlet property="userTextField" destination="vfF-aR-URa" id="tOH-HI-gUV"/>
+                        <segue destination="5ZC-TF-Szv" kind="show" identifier="mainViewSegue" id="sF5-Ng-TuI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
