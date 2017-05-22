@@ -150,7 +150,6 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="poH-6z-3Fg">
                                             <connections>
                                                 <action selector="AddPerson:" destination="1j8-Am-L8o" id="BGX-6E-o2w"/>
-                                                <segue destination="YQ2-hJ-PaM" kind="presentation" id="Vo9-ow-tn3"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -171,6 +170,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="peQ-mC-UbE"/>
                     <connections>
                         <outlet property="personList" destination="AmP-VX-0NR" id="6tv-WP-tJi"/>
+                        <segue destination="YQ2-hJ-PaM" kind="showDetail" identifier="createPatientSegue" id="LsR-WG-2bH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5Y-fI-MMz" userLabel="First Responder" sceneMemberID="firstResponder"/>

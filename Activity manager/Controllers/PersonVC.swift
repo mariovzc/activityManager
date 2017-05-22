@@ -9,7 +9,7 @@
 import UIKit
 class PersonVC: UIViewController , UITableViewDataSource, UITableViewDelegate  {
 
-    @IBOutlet weak var personList: UITableView!
+    @IBOutlet var personList: UITableView!
 
     
     let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -19,9 +19,8 @@ class PersonVC: UIViewController , UITableViewDataSource, UITableViewDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        personService = PersonService(context: managedContext)
         // Do any additional setup after loading the view.
-        people = personService.getAll()
+        refreshTable()
         
     }
 
@@ -31,7 +30,16 @@ class PersonVC: UIViewController , UITableViewDataSource, UITableViewDelegate  {
     }
     
     @IBAction func AddPerson(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "createPatientSegue", sender: nil)
+    }
+    func refreshTable() {
         
+        personService = PersonService(context: managedContext)
+        people = personService.getAll()
+        DispatchQueue.main.async{
+            //self.personList.reloadData()
+        }
+        //personList.reloadData()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return people.count

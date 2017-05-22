@@ -52,7 +52,10 @@ extension NewPersonVC{
     func backAction() {
         navigationController?.popViewController(animated: true)
         
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: {
+            let p = PersonVC()
+            p.refreshTable()
+        })
 
     }
     func validationSuccessful() {
