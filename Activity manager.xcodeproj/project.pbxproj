@@ -17,6 +17,8 @@
 		B33ABFE01ED374030092FF40 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFDE1ED374030092FF40 /* Person+CoreDataClass.swift */; };
 		B33ABFE11ED374030092FF40 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFDF1ED374030092FF40 /* Person+CoreDataProperties.swift */; };
 		B33ABFE41ED374470092FF40 /* PersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFE31ED374470092FF40 /* PersonService.swift */; };
+		B33ABFE71ED385460092FF40 /* PersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFE61ED385460092FF40 /* PersonVC.swift */; };
+		B33ABFE91ED3904D0092FF40 /* NewPersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFE81ED3904D0092FF40 /* NewPersonVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		B33ABFDE1ED374030092FF40 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataClass.swift"; path = "ModelHandler/Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B33ABFDF1ED374030092FF40 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataProperties.swift"; path = "ModelHandler/Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B33ABFE31ED374470092FF40 /* PersonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonService.swift; path = Models/PersonService.swift; sourceTree = "<group>"; };
+		B33ABFE61ED385460092FF40 /* PersonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonVC.swift; path = Controllers/PersonVC.swift; sourceTree = "<group>"; };
+		B33ABFE81ED3904D0092FF40 /* NewPersonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewPersonVC.swift; path = Controllers/NewPersonVC.swift; sourceTree = "<group>"; };
 		FB72095AF229060C0DA253D3 /* Pods_Activity_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Activity_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,7 @@
 		B33ABFB41ED32DBE0092FF40 /* Activity manager */ = {
 			isa = PBXGroup;
 			children = (
+				B33ABFE51ED3851F0092FF40 /* Controllers */,
 				B33ABFE21ED3743C0092FF40 /* Models */,
 				B33ABFDD1ED373E10092FF40 /* ModelHandler */,
 				B33ABFB51ED32DBE0092FF40 /* AppDelegate.swift */,
@@ -114,6 +119,23 @@
 				B33ABFE31ED374470092FF40 /* PersonService.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		B33ABFE51ED3851F0092FF40 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFEA1ED391A00092FF40 /* Person */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B33ABFEA1ED391A00092FF40 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFE61ED385460092FF40 /* PersonVC.swift */,
+				B33ABFE81ED3904D0092FF40 /* NewPersonVC.swift */,
+			);
+			name = Person;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +265,9 @@
 				B33ABFE01ED374030092FF40 /* Person+CoreDataClass.swift in Sources */,
 				B33ABFE11ED374030092FF40 /* Person+CoreDataProperties.swift in Sources */,
 				B33ABFB81ED32DBE0092FF40 /* LoginVC.swift in Sources */,
+				B33ABFE71ED385460092FF40 /* PersonVC.swift in Sources */,
 				B33ABFB61ED32DBE0092FF40 /* AppDelegate.swift in Sources */,
+				B33ABFE91ED3904D0092FF40 /* NewPersonVC.swift in Sources */,
 				B33ABFBE1ED32DBE0092FF40 /* Activity_manager.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

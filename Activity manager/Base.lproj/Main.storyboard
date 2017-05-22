@@ -133,7 +133,7 @@
         <!--Item 1-->
         <scene sceneID="aZd-vd-Gfp">
             <objects>
-                <viewController id="1j8-Am-L8o" sceneMemberID="viewController">
+                <viewController id="1j8-Am-L8o" customClass="PersonVC" customModule="Activity_manager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sOu-Lf-rxw"/>
                         <viewControllerLayoutGuide type="bottom" id="lqa-nA-iaC"/>
@@ -141,13 +141,105 @@
                     <view key="view" contentMode="scaleToFill" id="9JO-Sa-3Mp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3DC-BQ-uzK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="Bb2-uN-iwV">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="poH-6z-3Fg">
+                                            <connections>
+                                                <action selector="AddPerson:" destination="1j8-Am-L8o" id="BGX-6E-o2w"/>
+                                                <segue destination="YQ2-hJ-PaM" kind="presentation" id="Vo9-ow-tn3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AmP-VX-0NR">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1j8-Am-L8o" id="1Xh-uH-z4r"/>
+                                    <outlet property="delegate" destination="1j8-Am-L8o" id="uVN-vl-62B"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="peQ-mC-UbE"/>
+                    <connections>
+                        <outlet property="personList" destination="AmP-VX-0NR" id="6tv-WP-tJi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5Y-fI-MMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2246" y="-448"/>
+            <point key="canvasLocation" x="2245.5999999999999" y="-448.42578710644682"/>
+        </scene>
+        <!--New PersonVC-->
+        <scene sceneID="Hwd-gI-xRe">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GrL-Dz-hUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="YQ2-hJ-PaM" customClass="NewPersonVC" customModule="Activity_manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pxm-Ex-9Cr"/>
+                        <viewControllerLayoutGuide type="bottom" id="IWV-MK-tbb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TUO-8B-bpQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UrZ-oz-8UO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="Q8z-ll-xLX">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="aSK-H0-ing">
+                                            <connections>
+                                                <action selector="backButton:" destination="YQ2-hJ-PaM" id="Xom-bq-UeN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ngs-pS-e6B">
+                                            <connections>
+                                                <action selector="saveAction:" destination="YQ2-hJ-PaM" id="lFt-xC-sWC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4A-VU-cZT">
+                                <rect key="frame" x="16" y="96" width="325" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-S2-rFb">
+                                <rect key="frame" x="16" y="159" width="325" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhm-WS-c5M">
+                                <rect key="frame" x="16" y="218" width="325" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailtextField" destination="dhm-WS-c5M" id="wBO-az-Oxm"/>
+                        <outlet property="nameTextField" destination="S4A-VU-cZT" id="aPq-18-GM2"/>
+                        <outlet property="phoneTextField" destination="hJE-S2-rFb" id="S6P-gk-Pr5"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3309.5999999999999" y="-448.42578710644682"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hGV-qx-cuh">
