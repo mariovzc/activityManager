@@ -1,0 +1,22 @@
+PODS:
+  - SwiftValidator (4.0.0)
+
+DEPENDENCIES:
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  SwiftValidator:
+    :branch: master
+    :git: https://github.com/jpotts18/SwiftValidator.git
+
+CHECKOUT OPTIONS:
+  SwiftValidator:
+    :commit: 2a6c23ad9efd76127f6109445515cb9780e5ad92
+    :git: https://github.com/jpotts18/SwiftValidator.git
+
+SPEC CHECKSUMS:
+  SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
+
+PODFILE CHECKSUM: b908facd6184c7396849687f77f08b4df84bffb3
+
+COCOAPODS: 1.2.0
