@@ -14,6 +14,9 @@
 		B33ABFBE1ED32DBE0092FF40 /* Activity_manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFBC1ED32DBE0092FF40 /* Activity_manager.xcdatamodeld */; };
 		B33ABFC01ED32DBE0092FF40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33ABFBF1ED32DBE0092FF40 /* Assets.xcassets */; };
 		B33ABFC31ED32DBE0092FF40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33ABFC11ED32DBE0092FF40 /* LaunchScreen.storyboard */; };
+		B33ABFE01ED374030092FF40 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFDE1ED374030092FF40 /* Person+CoreDataClass.swift */; };
+		B33ABFE11ED374030092FF40 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFDF1ED374030092FF40 /* Person+CoreDataProperties.swift */; };
+		B33ABFE41ED374470092FF40 /* PersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFE31ED374470092FF40 /* PersonService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		B33ABFBF1ED32DBE0092FF40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B33ABFC21ED32DBE0092FF40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B33ABFC41ED32DBE0092FF40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B33ABFDE1ED374030092FF40 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataClass.swift"; path = "ModelHandler/Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B33ABFDF1ED374030092FF40 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataProperties.swift"; path = "ModelHandler/Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B33ABFE31ED374470092FF40 /* PersonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonService.swift; path = Models/PersonService.swift; sourceTree = "<group>"; };
 		FB72095AF229060C0DA253D3 /* Pods_Activity_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Activity_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +86,8 @@
 		B33ABFB41ED32DBE0092FF40 /* Activity manager */ = {
 			isa = PBXGroup;
 			children = (
+				B33ABFE21ED3743C0092FF40 /* Models */,
+				B33ABFDD1ED373E10092FF40 /* ModelHandler */,
 				B33ABFB51ED32DBE0092FF40 /* AppDelegate.swift */,
 				B33ABFB71ED32DBE0092FF40 /* LoginVC.swift */,
 				B33ABFB91ED32DBE0092FF40 /* Main.storyboard */,
@@ -89,6 +97,23 @@
 				B33ABFBC1ED32DBE0092FF40 /* Activity_manager.xcdatamodeld */,
 			);
 			path = "Activity manager";
+			sourceTree = "<group>";
+		};
+		B33ABFDD1ED373E10092FF40 /* ModelHandler */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFDE1ED374030092FF40 /* Person+CoreDataClass.swift */,
+				B33ABFDF1ED374030092FF40 /* Person+CoreDataProperties.swift */,
+			);
+			name = ModelHandler;
+			sourceTree = "<group>";
+		};
+		B33ABFE21ED3743C0092FF40 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFE31ED374470092FF40 /* PersonService.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33ABFE41ED374470092FF40 /* PersonService.swift in Sources */,
+				B33ABFE01ED374030092FF40 /* Person+CoreDataClass.swift in Sources */,
+				B33ABFE11ED374030092FF40 /* Person+CoreDataProperties.swift in Sources */,
 				B33ABFB81ED32DBE0092FF40 /* LoginVC.swift in Sources */,
 				B33ABFB61ED32DBE0092FF40 /* AppDelegate.swift in Sources */,
 				B33ABFBE1ED32DBE0092FF40 /* Activity_manager.xcdatamodeld in Sources */,
