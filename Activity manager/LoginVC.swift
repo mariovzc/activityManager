@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 import SwiftValidator
+import SCLAlertView
+
+
 
 class LoginVC: UIViewController, ValidationDelegate, UITextFieldDelegate {
 
@@ -34,6 +37,8 @@ class LoginVC: UIViewController, ValidationDelegate, UITextFieldDelegate {
 
 
     @IBAction func forgotUserAction() {
+        
+        SCLAlertView().showInfo("User Info", subTitle: "User: nativapps PW: 12345") // Info
     }
     
     @IBAction func loginAction() {
@@ -44,6 +49,8 @@ class LoginVC: UIViewController, ValidationDelegate, UITextFieldDelegate {
         if (userTextField.text == "nativapps" && passwordTextField.text == "12345") {
             
         }else{
+            SCLAlertView().showError("Error", subTitle: "Invalid Username or password") // Error
+
         }
     }
     
@@ -72,13 +79,22 @@ class LoginVC: UIViewController, ValidationDelegate, UITextFieldDelegate {
                 textField.layer.borderWidth = 1.0
             }
         })
-        
+        userTextField.placeholder = "Username"
+        passwordTextField.placeholder = "Password"
         validator.registerField(userTextField, rules: [RequiredRule()])
         validator.registerField(passwordTextField, rules: [RequiredRule()])
 
     }
     func hideKeyboard(){
         self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        //textField code
+        
+        textField.resignFirstResponder()  //if desired
+        loginAction()
+        return true
     }
     
 }

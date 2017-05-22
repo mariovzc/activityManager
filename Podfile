@@ -7,4 +7,7 @@ target 'Activity manager' do
 
   # Pods for Activity manager
 pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
+
+pod 'SCLAlertView'
+
 end
