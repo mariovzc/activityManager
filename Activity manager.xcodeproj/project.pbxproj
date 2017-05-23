@@ -114,10 +114,8 @@
 		B33ABFDD1ED373E10092FF40 /* ModelHandler */ = {
 			isa = PBXGroup;
 			children = (
-				B33ABFF11ED4820D0092FF40 /* Organization+CoreDataClass.swift */,
-				B33ABFF21ED4820D0092FF40 /* Organization+CoreDataProperties.swift */,
-				B33ABFDE1ED374030092FF40 /* Person+CoreDataClass.swift */,
-				B33ABFDF1ED374030092FF40 /* Person+CoreDataProperties.swift */,
+				B33ABFF61ED4835C0092FF40 /* Person */,
+				B33ABFF51ED483510092FF40 /* Organization */,
 			);
 			name = ModelHandler;
 			sourceTree = "<group>";
@@ -156,6 +154,24 @@
 				B33ABFEF1ED47D4E0092FF40 /* NewOrganizationVC.swift */,
 			);
 			name = Organization;
+			sourceTree = "<group>";
+		};
+		B33ABFF51ED483510092FF40 /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFF11ED4820D0092FF40 /* Organization+CoreDataClass.swift */,
+				B33ABFF21ED4820D0092FF40 /* Organization+CoreDataProperties.swift */,
+			);
+			name = Organization;
+			sourceTree = "<group>";
+		};
+		B33ABFF61ED4835C0092FF40 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFDE1ED374030092FF40 /* Person+CoreDataClass.swift */,
+				B33ABFDF1ED374030092FF40 /* Person+CoreDataProperties.swift */,
+			);
+			name = Person;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
