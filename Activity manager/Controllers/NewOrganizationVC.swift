@@ -3,16 +3,18 @@ import UIKit
 import SwiftValidator
 
 
-class NewPersonVC: UIViewController, ValidationDelegate, UITextFieldDelegate  {
+class NewOrganizationVC: UIViewController, ValidationDelegate {
 
-    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var nameTextfield: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
-    @IBOutlet weak var emailtextField: UITextField!
+    
     
     let validator = Validator()
-
+    
     let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var personService: PersonService!
+    var organizationService: OrganizationService!
     
     
     override func viewDidLoad() {
@@ -20,8 +22,7 @@ class NewPersonVC: UIViewController, ValidationDelegate, UITextFieldDelegate  {
         setUpValidations()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self,
                                                               action: #selector(LoginVC.hideKeyboard)))
-        personService = PersonService(context: managedContext)
-
+        organizationService = OrganizationService(context: managedContext)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,26 +30,22 @@ class NewPersonVC: UIViewController, ValidationDelegate, UITextFieldDelegate  {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backButton(_ sender: UIBarButtonItem) {
-        backAction()
+    @IBAction func backButtonAction(_ sender: Any) {
     }
-    
-    @IBAction func saveAction(_ sender: UIBarButtonItem) {
+
+    @IBAction func saveOrganization(_ sender: Any) {
         validator.validate(self)
-        
-        
+
     }
 
 }
-extension NewPersonVC{
+
+extension NewOrganizationVC{
     func backAction() {
         navigationController?.popViewController(animated: true)
         
-        dismiss(animated: true, completion: {
-            let p = PersonVC()
-            p.refreshTable()
-        })
-
+        dismiss(animated: true, completion:nil)
+        
     }
     func validationSuccessful() {
         var phone: NSNumber!
@@ -56,8 +53,8 @@ extension NewPersonVC{
             phone = NSNumber(value:myInteger)
         }
         
-        _ = personService.create(name: nameTextField.text!, phone: phone, email: emailtextField.text!)
-        personService.saveChanges()
+        _ = organizationService.create(name: nameTextfield.text!, phone: phone, address: addressTextField.text!)
+        organizationService.saveChanges()
         backAction()
     }
     
@@ -84,8 +81,8 @@ extension NewPersonVC{
                 textField.layer.borderWidth = 1.0
             }
         })
-        validator.registerField(nameTextField, rules: [RequiredRule()])
-        validator.registerField(emailtextField, rules: [RequiredRule(), EmailRule()])
+        validator.registerField(nameTextfield, rules: [RequiredRule()])
+        validator.registerField(addressTextField, rules: [RequiredRule()])
         validator.registerField(phoneTextField, rules: [RequiredRule(), PhoneNumberRule()])
         
     }

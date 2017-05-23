@@ -19,6 +19,11 @@
 		B33ABFE41ED374470092FF40 /* PersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFE31ED374470092FF40 /* PersonService.swift */; };
 		B33ABFE71ED385460092FF40 /* PersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFE61ED385460092FF40 /* PersonVC.swift */; };
 		B33ABFE91ED3904D0092FF40 /* NewPersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFE81ED3904D0092FF40 /* NewPersonVC.swift */; };
+		B33ABFEE1ED47D250092FF40 /* OrganizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFED1ED47D250092FF40 /* OrganizationVC.swift */; };
+		B33ABFF01ED47D4E0092FF40 /* NewOrganizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFEF1ED47D4E0092FF40 /* NewOrganizationVC.swift */; };
+		B33ABFF31ED4820D0092FF40 /* Organization+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF11ED4820D0092FF40 /* Organization+CoreDataClass.swift */; };
+		B33ABFF41ED4820D0092FF40 /* Organization+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF21ED4820D0092FF40 /* Organization+CoreDataProperties.swift */; };
+		B33ABFF81ED483AF0092FF40 /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF71ED483AF0092FF40 /* OrganizationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		B33ABFE31ED374470092FF40 /* PersonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonService.swift; path = Models/PersonService.swift; sourceTree = "<group>"; };
 		B33ABFE61ED385460092FF40 /* PersonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonVC.swift; path = Controllers/PersonVC.swift; sourceTree = "<group>"; };
 		B33ABFE81ED3904D0092FF40 /* NewPersonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewPersonVC.swift; path = Controllers/NewPersonVC.swift; sourceTree = "<group>"; };
+		B33ABFED1ED47D250092FF40 /* OrganizationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrganizationVC.swift; path = Controllers/OrganizationVC.swift; sourceTree = "<group>"; };
+		B33ABFEF1ED47D4E0092FF40 /* NewOrganizationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewOrganizationVC.swift; path = Controllers/NewOrganizationVC.swift; sourceTree = "<group>"; };
+		B33ABFF11ED4820D0092FF40 /* Organization+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Organization+CoreDataClass.swift"; path = "ModelHandler/Organization+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B33ABFF21ED4820D0092FF40 /* Organization+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Organization+CoreDataProperties.swift"; path = "ModelHandler/Organization+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B33ABFF71ED483AF0092FF40 /* OrganizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrganizationService.swift; path = Models/OrganizationService.swift; sourceTree = "<group>"; };
 		FB72095AF229060C0DA253D3 /* Pods_Activity_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Activity_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,7 +104,6 @@
 				B33ABFE21ED3743C0092FF40 /* Models */,
 				B33ABFDD1ED373E10092FF40 /* ModelHandler */,
 				B33ABFB51ED32DBE0092FF40 /* AppDelegate.swift */,
-				B33ABFB71ED32DBE0092FF40 /* LoginVC.swift */,
 				B33ABFB91ED32DBE0092FF40 /* Main.storyboard */,
 				B33ABFBF1ED32DBE0092FF40 /* Assets.xcassets */,
 				B33ABFC11ED32DBE0092FF40 /* LaunchScreen.storyboard */,
@@ -107,8 +116,8 @@
 		B33ABFDD1ED373E10092FF40 /* ModelHandler */ = {
 			isa = PBXGroup;
 			children = (
-				B33ABFDE1ED374030092FF40 /* Person+CoreDataClass.swift */,
-				B33ABFDF1ED374030092FF40 /* Person+CoreDataProperties.swift */,
+				B33ABFF61ED4835C0092FF40 /* Person */,
+				B33ABFF51ED483510092FF40 /* Organization */,
 			);
 			name = ModelHandler;
 			sourceTree = "<group>";
@@ -117,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				B33ABFE31ED374470092FF40 /* PersonService.swift */,
+				B33ABFF71ED483AF0092FF40 /* OrganizationService.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -124,6 +134,8 @@
 		B33ABFE51ED3851F0092FF40 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B33ABFEC1ED47CEE0092FF40 /* Organization */,
+				B33ABFB71ED32DBE0092FF40 /* LoginVC.swift */,
 				B33ABFEA1ED391A00092FF40 /* Person */,
 			);
 			name = Controllers;
@@ -134,6 +146,33 @@
 			children = (
 				B33ABFE61ED385460092FF40 /* PersonVC.swift */,
 				B33ABFE81ED3904D0092FF40 /* NewPersonVC.swift */,
+			);
+			name = Person;
+			sourceTree = "<group>";
+		};
+		B33ABFEC1ED47CEE0092FF40 /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFED1ED47D250092FF40 /* OrganizationVC.swift */,
+				B33ABFEF1ED47D4E0092FF40 /* NewOrganizationVC.swift */,
+			);
+			name = Organization;
+			sourceTree = "<group>";
+		};
+		B33ABFF51ED483510092FF40 /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFF11ED4820D0092FF40 /* Organization+CoreDataClass.swift */,
+				B33ABFF21ED4820D0092FF40 /* Organization+CoreDataProperties.swift */,
+			);
+			name = Organization;
+			sourceTree = "<group>";
+		};
+		B33ABFF61ED4835C0092FF40 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFDE1ED374030092FF40 /* Person+CoreDataClass.swift */,
+				B33ABFDF1ED374030092FF40 /* Person+CoreDataProperties.swift */,
 			);
 			name = Person;
 			sourceTree = "<group>";
@@ -263,10 +302,15 @@
 			files = (
 				B33ABFE41ED374470092FF40 /* PersonService.swift in Sources */,
 				B33ABFE01ED374030092FF40 /* Person+CoreDataClass.swift in Sources */,
+				B33ABFF81ED483AF0092FF40 /* OrganizationService.swift in Sources */,
+				B33ABFEE1ED47D250092FF40 /* OrganizationVC.swift in Sources */,
 				B33ABFE11ED374030092FF40 /* Person+CoreDataProperties.swift in Sources */,
+				B33ABFF41ED4820D0092FF40 /* Organization+CoreDataProperties.swift in Sources */,
 				B33ABFB81ED32DBE0092FF40 /* LoginVC.swift in Sources */,
 				B33ABFE71ED385460092FF40 /* PersonVC.swift in Sources */,
+				B33ABFF01ED47D4E0092FF40 /* NewOrganizationVC.swift in Sources */,
 				B33ABFB61ED32DBE0092FF40 /* AppDelegate.swift in Sources */,
+				B33ABFF31ED4820D0092FF40 /* Organization+CoreDataClass.swift in Sources */,
 				B33ABFE91ED3904D0092FF40 /* NewPersonVC.swift in Sources */,
 				B33ABFBE1ED32DBE0092FF40 /* Activity_manager.xcdatamodeld in Sources */,
 			);

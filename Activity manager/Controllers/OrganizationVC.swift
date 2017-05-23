@@ -1,48 +1,54 @@
 import UIKit
-class PersonVC: UIViewController , UITableViewDataSource, UITableViewDelegate  {
 
-    @IBOutlet var personList: UITableView!
-
+class OrganizationVC: UIViewController{
     
+
+    @IBOutlet weak var tableView: UITableView!
+
     let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var personService: PersonService!
+    var organizationService: OrganizationService!
     
-    var people : [Person] = []
+    var organizations : [Organization] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         refreshTable()
-        
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        refreshTable()
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewDidAppear(_ animated: Bool) {
-        refreshTable()
-    }
-    @IBAction func AddPerson(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "createPatientSegue", sender: nil)
-    }
+    
     func refreshTable() {
         
-        personService = PersonService(context: managedContext)
-        people = personService.getAll()
+        organizationService = OrganizationService(context: managedContext)
+        organizations = organizationService.getAll()
         
-        personList?.reloadData()
+        tableView?.reloadData()
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return people.count
-    }
+    
+}
 
+//TABLE VIEW METHODS
+extension OrganizationVC: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return organizations.count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Getting the right element
-        let element = people[indexPath.row]
+        let element = organizations[indexPath.row]
         
         // Instantiate a cell
-        let cellIdentifier = "PersonCel"
+        let cellIdentifier = "OrganizationCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
             ?? UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         
@@ -56,5 +62,4 @@ class PersonVC: UIViewController , UITableViewDataSource, UITableViewDelegate  {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
 }
