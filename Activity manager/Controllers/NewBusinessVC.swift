@@ -49,36 +49,53 @@ class NewBusinessVC: UIViewController {
 
     @IBAction func saveAction(_ sender: Any) {
     }
-
+    
+    @IBAction func showPeoplePicker(_ sender: UIButton) {
+        hidePickers()
+        personPicker.isHidden = false
+    }
+    @IBAction func showOrganizationPicker(_ sender: UIButton) {
+        hidePickers()
+        organizationPicker.isHidden = false
+    }
 }
-
-extension NewBusinessVC: UIPickerViewDelegate, UIPickerViewDataSource{
+extension NewBusinessVC{
     func initialData() {
         datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         date = datePicker.date
-
+        
         personService = PersonService(context: managedContext)
         people = personService.getAll()
         personTextField.text = people.first?.name
-
+        
         organizationService = OrganizationService(context: managedContext)
         organizations = organizationService.getAll()
         organizationTextField.text = organizations.first?.name
         
         hidePickers()
+        
+        
+        descriptionTextView.layer.borderColor = UIColor(red: 186/255, green: 186/255, blue: 186/255, alpha: 1.0).cgColor
+        descriptionTextView.layer.borderWidth = 0.5
+        descriptionTextView.layer.cornerRadius = 5
     }
     func back(){
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion:nil)
     }
+    func hidePickers(){
+        personPicker.isHidden = true
+        organizationPicker.isHidden = true
+    }
+
+}
+
+//Pickers methods
+extension NewBusinessVC: UIPickerViewDelegate, UIPickerViewDataSource{
     //this get the datepicker value
     func dateChanged(_ sender: UIDatePicker) {
         date = datePicker.date
         print(datePicker.date)
-    }
-    func hidePickers(){
-        personPicker.isHidden = true
-        organizationPicker.isHidden = true
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
