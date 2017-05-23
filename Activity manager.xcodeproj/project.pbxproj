@@ -24,6 +24,8 @@
 		B33ABFF31ED4820D0092FF40 /* Organization+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF11ED4820D0092FF40 /* Organization+CoreDataClass.swift */; };
 		B33ABFF41ED4820D0092FF40 /* Organization+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF21ED4820D0092FF40 /* Organization+CoreDataProperties.swift */; };
 		B33ABFF81ED483AF0092FF40 /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF71ED483AF0092FF40 /* OrganizationService.swift */; };
+		B33ABFFB1ED497670092FF40 /* BusinessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFFA1ED497670092FF40 /* BusinessVC.swift */; };
+		B33ABFFD1ED497840092FF40 /* NewBusinessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFFC1ED497840092FF40 /* NewBusinessVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		B33ABFF11ED4820D0092FF40 /* Organization+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Organization+CoreDataClass.swift"; path = "ModelHandler/Organization+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B33ABFF21ED4820D0092FF40 /* Organization+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Organization+CoreDataProperties.swift"; path = "ModelHandler/Organization+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B33ABFF71ED483AF0092FF40 /* OrganizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrganizationService.swift; path = Models/OrganizationService.swift; sourceTree = "<group>"; };
+		B33ABFFA1ED497670092FF40 /* BusinessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessVC.swift; path = Controllers/BusinessVC.swift; sourceTree = "<group>"; };
+		B33ABFFC1ED497840092FF40 /* NewBusinessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewBusinessVC.swift; path = Controllers/NewBusinessVC.swift; sourceTree = "<group>"; };
 		FB72095AF229060C0DA253D3 /* Pods_Activity_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Activity_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,6 +138,7 @@
 		B33ABFE51ED3851F0092FF40 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B33ABFF91ED497440092FF40 /* Business */,
 				B33ABFEC1ED47CEE0092FF40 /* Organization */,
 				B33ABFB71ED32DBE0092FF40 /* LoginVC.swift */,
 				B33ABFEA1ED391A00092FF40 /* Person */,
@@ -175,6 +180,15 @@
 				B33ABFDF1ED374030092FF40 /* Person+CoreDataProperties.swift */,
 			);
 			name = Person;
+			sourceTree = "<group>";
+		};
+		B33ABFF91ED497440092FF40 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFFA1ED497670092FF40 /* BusinessVC.swift */,
+				B33ABFFC1ED497840092FF40 /* NewBusinessVC.swift */,
+			);
+			name = Business;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +318,7 @@
 				B33ABFE01ED374030092FF40 /* Person+CoreDataClass.swift in Sources */,
 				B33ABFF81ED483AF0092FF40 /* OrganizationService.swift in Sources */,
 				B33ABFEE1ED47D250092FF40 /* OrganizationVC.swift in Sources */,
+				B33ABFFD1ED497840092FF40 /* NewBusinessVC.swift in Sources */,
 				B33ABFE11ED374030092FF40 /* Person+CoreDataProperties.swift in Sources */,
 				B33ABFF41ED4820D0092FF40 /* Organization+CoreDataProperties.swift in Sources */,
 				B33ABFB81ED32DBE0092FF40 /* LoginVC.swift in Sources */,
@@ -312,6 +327,7 @@
 				B33ABFB61ED32DBE0092FF40 /* AppDelegate.swift in Sources */,
 				B33ABFF31ED4820D0092FF40 /* Organization+CoreDataClass.swift in Sources */,
 				B33ABFE91ED3904D0092FF40 /* NewPersonVC.swift in Sources */,
+				B33ABFFB1ED497670092FF40 /* BusinessVC.swift in Sources */,
 				B33ABFBE1ED32DBE0092FF40 /* Activity_manager.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
