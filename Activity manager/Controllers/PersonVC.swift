@@ -1,11 +1,3 @@
-//
-//  PersonVC.swift
-//  Activity manager
-//
-//  Created by Giancarlo Valencia on 5/22/17.
-//  Copyright © 2017 None. All rights reserved.
-//
-
 import UIKit
 class PersonVC: UIViewController , UITableViewDataSource, UITableViewDelegate  {
 
