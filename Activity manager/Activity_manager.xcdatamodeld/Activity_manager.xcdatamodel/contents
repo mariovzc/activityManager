@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Business" representedClassName="Business" syncable="YES">
+        <attribute name="creation_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="fecha" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="tittle" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="value" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Double" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="organization" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Organization" inverseName="business" inverseEntity="Organization" syncable="YES"/>
         <relationship name="person" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="business" inverseEntity="Person" syncable="YES"/>
     </entity>
