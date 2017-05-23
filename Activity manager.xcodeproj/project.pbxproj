@@ -23,6 +23,7 @@
 		B33ABFF01ED47D4E0092FF40 /* NewOrganizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFEF1ED47D4E0092FF40 /* NewOrganizationVC.swift */; };
 		B33ABFF31ED4820D0092FF40 /* Organization+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF11ED4820D0092FF40 /* Organization+CoreDataClass.swift */; };
 		B33ABFF41ED4820D0092FF40 /* Organization+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF21ED4820D0092FF40 /* Organization+CoreDataProperties.swift */; };
+		B33ABFF81ED483AF0092FF40 /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF71ED483AF0092FF40 /* OrganizationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		B33ABFEF1ED47D4E0092FF40 /* NewOrganizationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewOrganizationVC.swift; path = Controllers/NewOrganizationVC.swift; sourceTree = "<group>"; };
 		B33ABFF11ED4820D0092FF40 /* Organization+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Organization+CoreDataClass.swift"; path = "ModelHandler/Organization+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B33ABFF21ED4820D0092FF40 /* Organization+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Organization+CoreDataProperties.swift"; path = "ModelHandler/Organization+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B33ABFF71ED483AF0092FF40 /* OrganizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrganizationService.swift; path = Models/OrganizationService.swift; sourceTree = "<group>"; };
 		FB72095AF229060C0DA253D3 /* Pods_Activity_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Activity_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				B33ABFE31ED374470092FF40 /* PersonService.swift */,
+				B33ABFF71ED483AF0092FF40 /* OrganizationService.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				B33ABFE41ED374470092FF40 /* PersonService.swift in Sources */,
 				B33ABFE01ED374030092FF40 /* Person+CoreDataClass.swift in Sources */,
+				B33ABFF81ED483AF0092FF40 /* OrganizationService.swift in Sources */,
 				B33ABFEE1ED47D250092FF40 /* OrganizationVC.swift in Sources */,
 				B33ABFE11ED374030092FF40 /* Person+CoreDataProperties.swift in Sources */,
 				B33ABFF41ED4820D0092FF40 /* Organization+CoreDataProperties.swift in Sources */,
