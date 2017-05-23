@@ -28,7 +28,9 @@ class PersonVC: UIViewController , UITableViewDataSource, UITableViewDelegate  {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        refreshTable()
+    }
     @IBAction func AddPerson(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "createPatientSegue", sender: nil)
     }
@@ -36,10 +38,8 @@ class PersonVC: UIViewController , UITableViewDataSource, UITableViewDelegate  {
         
         personService = PersonService(context: managedContext)
         people = personService.getAll()
-        DispatchQueue.main.async{
-            //self.personList.reloadData()
-        }
-        //personList.reloadData()
+        
+        personList?.reloadData()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return people.count
