@@ -94,7 +94,6 @@
 				B33ABFE21ED3743C0092FF40 /* Models */,
 				B33ABFDD1ED373E10092FF40 /* ModelHandler */,
 				B33ABFB51ED32DBE0092FF40 /* AppDelegate.swift */,
-				B33ABFB71ED32DBE0092FF40 /* LoginVC.swift */,
 				B33ABFB91ED32DBE0092FF40 /* Main.storyboard */,
 				B33ABFBF1ED32DBE0092FF40 /* Assets.xcassets */,
 				B33ABFC11ED32DBE0092FF40 /* LaunchScreen.storyboard */,
@@ -124,6 +123,7 @@
 		B33ABFE51ED3851F0092FF40 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B33ABFB71ED32DBE0092FF40 /* LoginVC.swift */,
 				B33ABFEA1ED391A00092FF40 /* Person */,
 			);
 			name = Controllers;
