@@ -1,35 +1,65 @@
-//
-//  OrganizationVC.swift
-//  Activity manager
-//
-//  Created by Giancarlo Valencia on 5/23/17.
-//  Copyright © 2017 None. All rights reserved.
-//
-
 import UIKit
 
-class OrganizationVC: UIViewController {
+class OrganizationVC: UIViewController{
+    
 
+    @IBOutlet weak var tableView: UITableView!
+
+    let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var organizationService: OrganizationService!
+    
+    var organizations : [Organization] = []
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        refreshTable()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        refreshTable()
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func refreshTable() {
+        
+        organizationService = OrganizationService(context: managedContext)
+        organizations = organizationService.getAll()
+        
+        tableView?.reloadData()
     }
-    */
+    
+}
 
+//TABLE VIEW METHODS
+extension OrganizationVC: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return organizations.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Getting the right element
+        let element = organizations[indexPath.row]
+        
+        // Instantiate a cell
+        let cellIdentifier = "OrganizationCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+            ?? UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
+        
+        // Adding the right informations
+        cell.textLabel?.text = element.name
+        
+        // Returning the cell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
