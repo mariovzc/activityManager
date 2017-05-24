@@ -32,6 +32,7 @@
 		B33AC0081ED611F70092FF40 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC0061ED611F70092FF40 /* Activity+CoreDataClass.swift */; };
 		B33AC0091ED611F70092FF40 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC0071ED611F70092FF40 /* Activity+CoreDataProperties.swift */; };
 		B33AC00B1ED61DA90092FF40 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC00A1ED61DA90092FF40 /* Activity.swift */; };
+		B33AC00E1ED632E90092FF40 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC00D1ED632E90092FF40 /* ActivityVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		B33AC0061ED611F70092FF40 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Activity+CoreDataClass.swift"; path = "ModelHandler/Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B33AC0071ED611F70092FF40 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Activity+CoreDataProperties.swift"; path = "ModelHandler/Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B33AC00A1ED61DA90092FF40 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = Models/Activity.swift; sourceTree = "<group>"; };
+		B33AC00D1ED632E90092FF40 /* ActivityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityVC.swift; path = Controllers/ActivityVC.swift; sourceTree = "<group>"; };
 		FB72095AF229060C0DA253D3 /* Pods_Activity_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Activity_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 		B33ABFE51ED3851F0092FF40 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B33AC00C1ED632D00092FF40 /* Activity */,
 				B33ABFF91ED497440092FF40 /* Business */,
 				B33ABFEC1ED47CEE0092FF40 /* Organization */,
 				B33ABFB71ED32DBE0092FF40 /* LoginVC.swift */,
@@ -221,6 +224,14 @@
 			children = (
 				B33AC0061ED611F70092FF40 /* Activity+CoreDataClass.swift */,
 				B33AC0071ED611F70092FF40 /* Activity+CoreDataProperties.swift */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		B33AC00C1ED632D00092FF40 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				B33AC00D1ED632E90092FF40 /* ActivityVC.swift */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -367,6 +378,7 @@
 				B33ABFFB1ED497670092FF40 /* BusinessVC.swift in Sources */,
 				B33AC0041ED4D2200092FF40 /* Business.swift in Sources */,
 				B33ABFBE1ED32DBE0092FF40 /* Activity_manager.xcdatamodeld in Sources */,
+				B33AC00E1ED632E90092FF40 /* ActivityVC.swift in Sources */,
 				B33AC0021ED4CD470092FF40 /* Business+CoreDataProperties.swift in Sources */,
 				B33AC0081ED611F70092FF40 /* Activity+CoreDataClass.swift in Sources */,
 			);
