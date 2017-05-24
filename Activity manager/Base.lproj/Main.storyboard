@@ -73,7 +73,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Activity-->
         <scene sceneID="eRC-Dc-1Wn">
             <objects>
                 <viewController id="dsx-ar-uIE" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="JPW-Dx-VtZ"/>
+                    <tabBarItem key="tabBarItem" title="Activity" id="JPW-Dx-VtZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cto-EE-MdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
