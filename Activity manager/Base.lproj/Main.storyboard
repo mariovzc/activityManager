@@ -117,14 +117,26 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fk3-el-Olt">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RD0-OG-WFM" id="KeR-OS-rU5"/>
+                                    <outlet property="delegate" destination="RD0-OG-WFM" id="42O-WE-CRy"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Business" id="5Oa-fF-6Q7"/>
+                    <connections>
+                        <outlet property="tableView" destination="fk3-el-Olt" id="ej9-DI-OVl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6S-bA-yhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2246" y="1041"/>
+            <point key="canvasLocation" x="2245.5999999999999" y="1040.3298350824589"/>
         </scene>
         <!--New BusinessVC-->
         <scene sceneID="cEW-Rc-E05">

@@ -1,14 +1,13 @@
-//
-//  BusinessVC.swift
-//  Activity manager
-//
-//  Created by Giancarlo Valencia on 5/23/17.
-//  Copyright © 2017 None. All rights reserved.
-//
-
 import UIKit
 
 class BusinessVC: UIViewController {
+
+    @IBOutlet weak var tableView: UITableView!
+
+    let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var buisinessService: BusinessService!
+    
+    var buisiness : [Business] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +20,44 @@ class BusinessVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        refreshTable()
     }
-    */
+    
+    func refreshTable() {
+        
+        buisinessService = BusinessService(context: managedContext)
+        buisiness = buisinessService.getAll()
+        
+        tableView?.reloadData()
+    }
 
+}
+
+//TABLE VIEW METHODS
+extension BusinessVC: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return buisiness.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Getting the right element
+        let element = buisiness[indexPath.row]
+        
+        // Instantiate a cell
+        let cellIdentifier = "OrganizationCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+            ?? UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
+        
+        // Adding the right informations
+        cell.textLabel?.text = element.tittle
+        
+        // Returning the cell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
