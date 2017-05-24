@@ -33,6 +33,7 @@
 		B33AC0091ED611F70092FF40 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC0071ED611F70092FF40 /* Activity+CoreDataProperties.swift */; };
 		B33AC00B1ED61DA90092FF40 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC00A1ED61DA90092FF40 /* Activity.swift */; };
 		B33AC00E1ED632E90092FF40 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC00D1ED632E90092FF40 /* ActivityVC.swift */; };
+		B33AC0101ED636F40092FF40 /* NewActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC00F1ED636F40092FF40 /* NewActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		B33AC0071ED611F70092FF40 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Activity+CoreDataProperties.swift"; path = "ModelHandler/Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B33AC00A1ED61DA90092FF40 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = Models/Activity.swift; sourceTree = "<group>"; };
 		B33AC00D1ED632E90092FF40 /* ActivityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityVC.swift; path = Controllers/ActivityVC.swift; sourceTree = "<group>"; };
+		B33AC00F1ED636F40092FF40 /* NewActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewActivity.swift; path = Controllers/NewActivity.swift; sourceTree = "<group>"; };
 		FB72095AF229060C0DA253D3 /* Pods_Activity_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Activity_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				B33AC00D1ED632E90092FF40 /* ActivityVC.swift */,
+				B33AC00F1ED636F40092FF40 /* NewActivity.swift */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				B33ABFF01ED47D4E0092FF40 /* NewOrganizationVC.swift in Sources */,
 				B33ABFB61ED32DBE0092FF40 /* AppDelegate.swift in Sources */,
 				B33AC0091ED611F70092FF40 /* Activity+CoreDataProperties.swift in Sources */,
+				B33AC0101ED636F40092FF40 /* NewActivity.swift in Sources */,
 				B33ABFF31ED4820D0092FF40 /* Organization+CoreDataClass.swift in Sources */,
 				B33ABFE91ED3904D0092FF40 /* NewPersonVC.swift in Sources */,
 				B33ABFFB1ED497670092FF40 /* BusinessVC.swift in Sources */,
