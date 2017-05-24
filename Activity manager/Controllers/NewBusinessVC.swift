@@ -1,6 +1,8 @@
+import Foundation
 import UIKit
+import SwiftValidator
 
-class NewBusinessVC: UIViewController {
+class NewBusinessVC: UIViewController, ValidationDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -30,12 +32,19 @@ class NewBusinessVC: UIViewController {
     var organizations : [Organization] = []
     var selectedOrganization = 0
     
+    var businessService: BusinessService!
+    
+    let validator = Validator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         initialData()
         date = datePicker.date
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                              action: #selector(hideKeyboard)))
+        setUpValidations()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +57,7 @@ class NewBusinessVC: UIViewController {
     }
 
     @IBAction func saveAction(_ sender: Any) {
+        validator.validate(self)
     }
     
     @IBAction func showPeoplePicker(_ sender: UIButton) {
@@ -72,13 +82,19 @@ extension NewBusinessVC{
         organizations = organizationService.getAll()
         organizationTextField.text = organizations.first?.name
         
-        hidePickers()
+        businessService = BusinessService(context: managedContext)
         
+        hidePickers()
         
         descriptionTextView.layer.borderColor = UIColor(red: 186/255, green: 186/255, blue: 186/255, alpha: 1.0).cgColor
         descriptionTextView.layer.borderWidth = 0.5
         descriptionTextView.layer.cornerRadius = 5
     }
+    func hideKeyboard(){
+        self.view.endEditing(true)
+        hidePickers()
+    }
+
     func back(){
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion:nil)
@@ -88,6 +104,51 @@ extension NewBusinessVC{
         organizationPicker.isHidden = true
     }
 
+}
+extension NewBusinessVC{
+    func validationSuccessful() {
+        
+        
+        _ = businessService.create(tittle: nameTextField.text!,
+                            description: descriptionTextView.text,
+                            value: Double(pricingTextField.text!)!,
+                            date: date! as NSDate,
+                            organization: organizations[selectedOrganization],
+                            person: people[selectedPerson],
+                            status: statusSwitch.isOn)
+        businessService.saveChanges()
+        back()
+    }
+    
+    func validationFailed(_ errors:[(Validatable ,ValidationError)]) {
+        // turn the fields to red
+        for (field, _) in errors {
+            if let field = field as? UITextField {
+                field.layer.borderColor = UIColor.red.cgColor
+                field.layer.borderWidth = 1.0
+            }
+        }
+    }
+    
+    func setUpValidations() {
+        validator.styleTransformers(success:{ (validationRule) -> Void in
+            if let textField = validationRule.field as? UITextField {
+                textField.layer.borderColor = UIColor.green.cgColor
+                textField.layer.borderWidth = 0.5
+                
+            }
+        }, error:{ (validationError) -> Void in
+            if let textField = validationError.field as? UITextField {
+                textField.layer.borderColor = UIColor.red.cgColor
+                textField.layer.borderWidth = 1.0
+            }
+        })
+        validator.registerField(nameTextField, rules: [RequiredRule()])
+        validator.registerField(pricingTextField, rules: [RequiredRule()])
+        validator.registerField(personTextField, rules: [RequiredRule()])
+        validator.registerField(organizationTextField, rules: [RequiredRule()])
+        
+    }
 }
 
 //Pickers methods
