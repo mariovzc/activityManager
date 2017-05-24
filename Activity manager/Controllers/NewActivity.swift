@@ -1,15 +1,19 @@
-//
-//  NewActivity.swift
-//  Activity manager
-//
-//  Created by Giancarlo Valencia on 5/24/17.
-//  Copyright © 2017 None. All rights reserved.
-//
-
 import UIKit
 
 class NewActivity: UIViewController {
 
+    @IBOutlet weak var descTextView: UITextView!
+    
+    @IBOutlet weak var personPicker: UIPickerView!
+    
+    @IBOutlet weak var businessPicker: UIPickerView!
+    
+    @IBOutlet weak var typeTextField: UITextField!
+    
+    @IBOutlet weak var organizationPicker: UIPickerView!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +25,8 @@ class NewActivity: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancelAction(_ sender: Any) {
     }
-    */
-
+    @IBAction func saveAction(_ sender: Any) {
+    }
 }

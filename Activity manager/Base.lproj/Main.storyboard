@@ -130,12 +130,86 @@
                     <view key="view" contentMode="scaleToFill" id="6Gt-7e-MVJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DY9-1I-b3x">
+                                <rect key="frame" x="16" y="405" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="x3k-YK-WMc">
+                                <rect key="frame" x="16" y="528" width="343" height="139"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="517356817.92309397">
+                                    <!--2017-05-24 22:13:37 +0000-->
+                                </date>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJo-HE-b9o">
+                                <rect key="frame" x="16" y="254" width="159" height="113"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hgA-XY-x5X" id="Qp9-ib-5eb"/>
+                                    <outlet property="delegate" destination="hgA-XY-x5X" id="nYy-eY-T1O"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xlq-bI-GTJ">
+                                <rect key="frame" x="200" y="254" width="159" height="113"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hgA-XY-x5X" id="DP0-uA-FLF"/>
+                                    <outlet property="delegate" destination="hgA-XY-x5X" id="CKH-VK-Ws2"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ENk-6m-Pq2">
+                                <rect key="frame" x="200" y="382" width="159" height="101"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hgA-XY-x5X" id="Da2-dI-dzz"/>
+                                    <outlet property="delegate" destination="hgA-XY-x5X" id="DEQ-NW-odr"/>
+                                </connections>
+                            </pickerView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jOE-Zm-ae3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="4h0-1C-mB8">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="675-V7-1Fa">
+                                            <connections>
+                                                <action selector="cancelAction:" destination="hgA-XY-x5X" id="6eo-BL-3Wv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="GJd-Ww-vuV">
+                                            <connections>
+                                                <action selector="saveAction:" destination="hgA-XY-x5X" id="F8o-hs-Fuk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LKI-EY-l96">
+                                <rect key="frame" x="16" y="97" width="343" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="businessPicker" destination="Xlq-bI-GTJ" id="Rbs-wf-2d1"/>
+                        <outlet property="datePicker" destination="x3k-YK-WMc" id="qqG-QT-rK6"/>
+                        <outlet property="descTextView" destination="LKI-EY-l96" id="pYb-5Q-pje"/>
+                        <outlet property="organizationPicker" destination="ENk-6m-Pq2" id="9Mp-lS-yJk"/>
+                        <outlet property="personPicker" destination="hJo-HE-b9o" id="sFc-B4-OwA"/>
+                        <outlet property="typeTextField" destination="DY9-1I-b3x" id="H4p-Ys-8by"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSX-x3-HMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3310" y="1809"/>
+            <point key="canvasLocation" x="3309.5999999999999" y="1808.5457271364319"/>
         </scene>
         <!--Business-->
         <scene sceneID="uP2-h1-Ekk">
@@ -278,7 +352,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q0m-9r-sPC">
                                 <rect key="frame" x="250" y="505" width="51" height="31"/>
