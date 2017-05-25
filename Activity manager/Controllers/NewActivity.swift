@@ -51,8 +51,10 @@ class NewActivity: UIViewController {
     }
     
     @IBAction func cancelAction(_ sender: Any) {
+        back()
     }
     @IBAction func saveAction(_ sender: Any) {
+        back()
     }
 }
 extension NewActivity{
