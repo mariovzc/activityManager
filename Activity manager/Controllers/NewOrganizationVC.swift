@@ -31,6 +31,7 @@ class NewOrganizationVC: UIViewController, ValidationDelegate {
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
+        backAction()
     }
 
     @IBAction func saveOrganization(_ sender: Any) {

@@ -24,6 +24,16 @@
 		B33ABFF31ED4820D0092FF40 /* Organization+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF11ED4820D0092FF40 /* Organization+CoreDataClass.swift */; };
 		B33ABFF41ED4820D0092FF40 /* Organization+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF21ED4820D0092FF40 /* Organization+CoreDataProperties.swift */; };
 		B33ABFF81ED483AF0092FF40 /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFF71ED483AF0092FF40 /* OrganizationService.swift */; };
+		B33ABFFB1ED497670092FF40 /* BusinessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFFA1ED497670092FF40 /* BusinessVC.swift */; };
+		B33ABFFD1ED497840092FF40 /* NewBusinessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFFC1ED497840092FF40 /* NewBusinessVC.swift */; };
+		B33AC0011ED4CD470092FF40 /* Business+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33ABFFF1ED4CD470092FF40 /* Business+CoreDataClass.swift */; };
+		B33AC0021ED4CD470092FF40 /* Business+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC0001ED4CD470092FF40 /* Business+CoreDataProperties.swift */; };
+		B33AC0041ED4D2200092FF40 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC0031ED4D2200092FF40 /* Business.swift */; };
+		B33AC0081ED611F70092FF40 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC0061ED611F70092FF40 /* Activity+CoreDataClass.swift */; };
+		B33AC0091ED611F70092FF40 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC0071ED611F70092FF40 /* Activity+CoreDataProperties.swift */; };
+		B33AC00B1ED61DA90092FF40 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC00A1ED61DA90092FF40 /* Activity.swift */; };
+		B33AC00E1ED632E90092FF40 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC00D1ED632E90092FF40 /* ActivityVC.swift */; };
+		B33AC0101ED636F40092FF40 /* NewActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AC00F1ED636F40092FF40 /* NewActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +57,16 @@
 		B33ABFF11ED4820D0092FF40 /* Organization+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Organization+CoreDataClass.swift"; path = "ModelHandler/Organization+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B33ABFF21ED4820D0092FF40 /* Organization+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Organization+CoreDataProperties.swift"; path = "ModelHandler/Organization+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B33ABFF71ED483AF0092FF40 /* OrganizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrganizationService.swift; path = Models/OrganizationService.swift; sourceTree = "<group>"; };
+		B33ABFFA1ED497670092FF40 /* BusinessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessVC.swift; path = Controllers/BusinessVC.swift; sourceTree = "<group>"; };
+		B33ABFFC1ED497840092FF40 /* NewBusinessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewBusinessVC.swift; path = Controllers/NewBusinessVC.swift; sourceTree = "<group>"; };
+		B33ABFFF1ED4CD470092FF40 /* Business+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Business+CoreDataClass.swift"; path = "ModelHandler/Business+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B33AC0001ED4CD470092FF40 /* Business+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Business+CoreDataProperties.swift"; path = "ModelHandler/Business+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B33AC0031ED4D2200092FF40 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Business.swift; path = Models/Business.swift; sourceTree = "<group>"; };
+		B33AC0061ED611F70092FF40 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Activity+CoreDataClass.swift"; path = "ModelHandler/Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B33AC0071ED611F70092FF40 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Activity+CoreDataProperties.swift"; path = "ModelHandler/Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B33AC00A1ED61DA90092FF40 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = Models/Activity.swift; sourceTree = "<group>"; };
+		B33AC00D1ED632E90092FF40 /* ActivityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityVC.swift; path = Controllers/ActivityVC.swift; sourceTree = "<group>"; };
+		B33AC00F1ED636F40092FF40 /* NewActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewActivity.swift; path = Controllers/NewActivity.swift; sourceTree = "<group>"; };
 		FB72095AF229060C0DA253D3 /* Pods_Activity_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Activity_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +136,8 @@
 		B33ABFDD1ED373E10092FF40 /* ModelHandler */ = {
 			isa = PBXGroup;
 			children = (
+				B33AC0051ED611DA0092FF40 /* Activity */,
+				B33ABFFE1ED4CD2F0092FF40 /* Business */,
 				B33ABFF61ED4835C0092FF40 /* Person */,
 				B33ABFF51ED483510092FF40 /* Organization */,
 			);
@@ -127,6 +149,8 @@
 			children = (
 				B33ABFE31ED374470092FF40 /* PersonService.swift */,
 				B33ABFF71ED483AF0092FF40 /* OrganizationService.swift */,
+				B33AC0031ED4D2200092FF40 /* Business.swift */,
+				B33AC00A1ED61DA90092FF40 /* Activity.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -134,6 +158,8 @@
 		B33ABFE51ED3851F0092FF40 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B33AC00C1ED632D00092FF40 /* Activity */,
+				B33ABFF91ED497440092FF40 /* Business */,
 				B33ABFEC1ED47CEE0092FF40 /* Organization */,
 				B33ABFB71ED32DBE0092FF40 /* LoginVC.swift */,
 				B33ABFEA1ED391A00092FF40 /* Person */,
@@ -175,6 +201,42 @@
 				B33ABFDF1ED374030092FF40 /* Person+CoreDataProperties.swift */,
 			);
 			name = Person;
+			sourceTree = "<group>";
+		};
+		B33ABFF91ED497440092FF40 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFFA1ED497670092FF40 /* BusinessVC.swift */,
+				B33ABFFC1ED497840092FF40 /* NewBusinessVC.swift */,
+			);
+			name = Business;
+			sourceTree = "<group>";
+		};
+		B33ABFFE1ED4CD2F0092FF40 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				B33ABFFF1ED4CD470092FF40 /* Business+CoreDataClass.swift */,
+				B33AC0001ED4CD470092FF40 /* Business+CoreDataProperties.swift */,
+			);
+			name = Business;
+			sourceTree = "<group>";
+		};
+		B33AC0051ED611DA0092FF40 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				B33AC0061ED611F70092FF40 /* Activity+CoreDataClass.swift */,
+				B33AC0071ED611F70092FF40 /* Activity+CoreDataProperties.swift */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		B33AC00C1ED632D00092FF40 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				B33AC00D1ED632E90092FF40 /* ActivityVC.swift */,
+				B33AC00F1ED636F40092FF40 /* NewActivity.swift */,
+			);
+			name = Activity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,15 +366,25 @@
 				B33ABFE01ED374030092FF40 /* Person+CoreDataClass.swift in Sources */,
 				B33ABFF81ED483AF0092FF40 /* OrganizationService.swift in Sources */,
 				B33ABFEE1ED47D250092FF40 /* OrganizationVC.swift in Sources */,
+				B33ABFFD1ED497840092FF40 /* NewBusinessVC.swift in Sources */,
 				B33ABFE11ED374030092FF40 /* Person+CoreDataProperties.swift in Sources */,
 				B33ABFF41ED4820D0092FF40 /* Organization+CoreDataProperties.swift in Sources */,
+				B33AC0011ED4CD470092FF40 /* Business+CoreDataClass.swift in Sources */,
 				B33ABFB81ED32DBE0092FF40 /* LoginVC.swift in Sources */,
+				B33AC00B1ED61DA90092FF40 /* Activity.swift in Sources */,
 				B33ABFE71ED385460092FF40 /* PersonVC.swift in Sources */,
 				B33ABFF01ED47D4E0092FF40 /* NewOrganizationVC.swift in Sources */,
 				B33ABFB61ED32DBE0092FF40 /* AppDelegate.swift in Sources */,
+				B33AC0091ED611F70092FF40 /* Activity+CoreDataProperties.swift in Sources */,
+				B33AC0101ED636F40092FF40 /* NewActivity.swift in Sources */,
 				B33ABFF31ED4820D0092FF40 /* Organization+CoreDataClass.swift in Sources */,
 				B33ABFE91ED3904D0092FF40 /* NewPersonVC.swift in Sources */,
+				B33ABFFB1ED497670092FF40 /* BusinessVC.swift in Sources */,
+				B33AC0041ED4D2200092FF40 /* Business.swift in Sources */,
 				B33ABFBE1ED32DBE0092FF40 /* Activity_manager.xcdatamodeld in Sources */,
+				B33AC00E1ED632E90092FF40 /* ActivityVC.swift in Sources */,
+				B33AC0021ED4CD470092FF40 /* Business+CoreDataProperties.swift in Sources */,
+				B33AC0081ED611F70092FF40 /* Activity+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +510,9 @@
 			baseConfigurationReference = A929CC4D6EE53B4AC4A29D9C /* Pods-Activity manager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				INFOPLIST_FILE = "Activity manager/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mvz.Activity-manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,7 +526,9 @@
 			baseConfigurationReference = 15D8E76977B0AA18A64D591A /* Pods-Activity manager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				INFOPLIST_FILE = "Activity manager/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mvz.Activity-manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";

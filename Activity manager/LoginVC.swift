@@ -69,11 +69,6 @@ class LoginVC: UIViewController, ValidationDelegate, UITextFieldDelegate {
     
     func setUpValidations() {
         validator.styleTransformers(success:{ (validationRule) -> Void in
-            if let textField = validationRule.field as? UITextField {
-                textField.layer.borderColor = UIColor.green.cgColor
-                textField.layer.borderWidth = 0.5
-                
-            }
         }, error:{ (validationError) -> Void in
             if let textField = validationError.field as? UITextField {
                 textField.layer.borderColor = UIColor.red.cgColor
