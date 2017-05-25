@@ -89,9 +89,9 @@ extension NewActivity{
         dismiss(animated: true, completion:nil)
     }
     func hidePickers(){
-        personPicker.isHidden = true
-        organizationPicker.isHidden = true
-        businessPicker.isHidden = true
+        //personPicker.isHidden = true
+        //organizationPicker.isHidden = true
+        //businessPicker.isHidden = true
     }
 }
 
