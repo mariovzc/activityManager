@@ -63,10 +63,14 @@ class NewBusinessVC: UIViewController, ValidationDelegate {
     @IBAction func showPeoplePicker(_ sender: UIButton) {
         hidePickers()
         personPicker.isHidden = false
+        personPicker.isUserInteractionEnabled = true
+        self.view.bringSubview(toFront: personPicker)
     }
     @IBAction func showOrganizationPicker(_ sender: UIButton) {
         hidePickers()
         organizationPicker.isHidden = false
+        organizationPicker.isUserInteractionEnabled = true
+        self.view.bringSubview(toFront: organizationPicker)
     }
 }
 extension NewBusinessVC{
@@ -102,6 +106,9 @@ extension NewBusinessVC{
     func hidePickers(){
         personPicker.isHidden = true
         organizationPicker.isHidden = true
+        personPicker.isUserInteractionEnabled = false
+        organizationPicker.isUserInteractionEnabled = false
+        self.view.bringSubview(toFront: statusSwitch)
     }
 
 }
